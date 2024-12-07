@@ -60,7 +60,7 @@ export function RecipeImportDialog({ open, onOpenChange, influencerId }: RecipeI
     try {
       setLoading(true);
       
-      const newRecipe = importRecipe({
+      await importRecipe({
         title: scrapedData.title,
         description: scrapedData.description,
         image_url: scrapedData.image,
@@ -157,7 +157,7 @@ export function RecipeImportDialog({ open, onOpenChange, influencerId }: RecipeI
                     <img 
                       src={scrapedData.image} 
                       alt={scrapedData.title}
-                      className="object-cover w-full h-full"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
                   
