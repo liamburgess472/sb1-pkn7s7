@@ -53,19 +53,19 @@ export function MealPlannerProvider({ children }: MealPlanProviderProps) {
           const dayMeals = data
             .filter(meal => meal.day_of_week === dayOfWeek && meal.recipe)
             .map((meal) => {
-              const mealRecipe = meal.recipe as MealPlanRecipe;
+              const recipe = meal.recipe as unknown as MealPlanRecipe;
               return {
-                id: mealRecipe.id,
-                title: mealRecipe.title,
-                image: mealRecipe.image_url,
-                prepTime: mealRecipe.prep_time,
-                cookTime: mealRecipe.cook_time,
+                id: recipe.id,
+                title: recipe.title,
+                image: recipe.image_url,
+                prepTime: recipe.prep_time,
+                cookTime: recipe.cook_time,
                 servings: 4,
                 calories: 0,
                 influencer: {
-                  id: mealRecipe.influencer.id,
-                  name: mealRecipe.influencer.name,
-                  avatar: mealRecipe.influencer.avatar_url,
+                  id: recipe.influencer.id,
+                  name: recipe.influencer.name,
+                  avatar: recipe.influencer.avatar_url,
                 },
                 tags: [],
                 description: "",
