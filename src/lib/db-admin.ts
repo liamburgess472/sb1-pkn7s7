@@ -1,4 +1,4 @@
-import { getRecipes, getInfluencers, getUser } from './cache';
+import { getRecipes, getInfluencers } from './cache';
 import { type Recipe } from '@/types/recipe';
 import { type Influencer } from '@/types/influencer';
 
@@ -9,7 +9,6 @@ interface UserStats {
   weeklyRecipeCount: number;
 }
 
-// Mock data for demonstration
 const mockUsers = [
   {
     id: '1',
@@ -26,7 +25,6 @@ const mockUsers = [
 ];
 
 export async function getUserStats(): Promise<UserStats[]> {
-  // In a real application, this would fetch from a database
   return mockUsers;
 }
 
