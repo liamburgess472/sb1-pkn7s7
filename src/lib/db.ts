@@ -41,8 +41,9 @@ export async function fetchRecipes(): Promise<Recipe[]> {
       instructions: recipe.instructions || [],
       nutritionalInfo: recipe.nutritional_info,
       influencer: {
+        id: recipe.influencer?.id || 'unknown',
         name: recipe.influencer?.name || 'Unknown',
-        avatar: recipe.influencer?.avatar_url || '',
+        avatar: recipe.influencer?.avatar_url || ''
       }
     }));
   } catch (error) {
@@ -92,8 +93,9 @@ export async function fetchFeaturedRecipes(): Promise<Recipe[]> {
       instructions: recipe.instructions || [],
       nutritionalInfo: recipe.nutritional_info,
       influencer: {
+        id: recipe.influencer?.id || 'unknown',
         name: recipe.influencer?.name || 'Unknown',
-        avatar: recipe.influencer?.avatar_url || '',
+        avatar: recipe.influencer?.avatar_url || ''
       }
     }));
   } catch (error) {
@@ -144,8 +146,9 @@ export async function fetchRecipeById(id: string): Promise<Recipe | null> {
       instructions: recipe.instructions || [],
       nutritionalInfo: recipe.nutritional_info,
       influencer: {
+        id: recipe.influencer?.id || 'unknown',
         name: recipe.influencer?.name || 'Unknown',
-        avatar: recipe.influencer?.avatar_url || '',
+        avatar: recipe.influencer?.avatar_url || ''
       }
     };
   } catch (error) {
