@@ -1,3 +1,16 @@
+import { type Recipe } from '@/types/recipe';
+
+export interface ScrapedRecipe {
+  title: string;
+  description: string;
+  image: string;
+  ingredients: { name: string; amount: string; unit: string; }[];
+  instructions: string[];
+  prepTime?: number;
+  cookTime?: number;
+  servings?: number;
+}
+
 export interface Recipe {
   id: string;
   title: string;
