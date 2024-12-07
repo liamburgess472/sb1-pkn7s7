@@ -44,11 +44,6 @@ export const featuredRecipes: Recipe[] = [
       sodium: 580
     }
   }
-  // ... other recipes follow the same pattern
 ];
 
-// Extended recipe collection
-const additionalRecipes: Recipe[] = [];
-
-// Combine featured and additional recipes for the complete collection
-export const allRecipes = [...featuredRecipes, ...additionalRecipes];
+export const allRecipes = [...featuredRecipes];
